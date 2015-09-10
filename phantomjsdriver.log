@@ -1,0 +1,81 @@
+[INFO  - 2015-09-10T15:44:42.046Z] GhostDriver - Main - running on port 39912
+[INFO  - 2015-09-10T15:44:42.173Z] Session [da49da90-57d2-11e5-abc0-cd8c51be6a0b] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; PPC Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2015-09-10T15:44:42.174Z] Session [da49da90-57d2-11e5-abc0-cd8c51be6a0b] - page.customHeaders:  - {}
+[INFO  - 2015-09-10T15:44:42.174Z] Session [da49da90-57d2-11e5-abc0-cd8c51be6a0b] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-09-10T15:44:42.174Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: da49da90-57d2-11e5-abc0-cd8c51be6a0b
+[ERROR - 2015-09-10T15:44:43.468Z] Session [da49da90-57d2-11e5-abc0-cd8c51be6a0b] - page.onError - msg: TypeError: 'undefined' is not a function (evaluating 'google.tick("load","dcl")')
+[ERROR - 2015-09-10T15:44:43.468Z] Session [da49da90-57d2-11e5-abc0-cd8c51be6a0b] - page.onError - stack:
+  (anonymous function) (http://www.google.com.gi/search?hl=en-GI&source=hp&biw=&bih=&q=Cheese%21&gbv=2&oq=&gs_l=:1)
+  b (http://www.google.com.gi/search?hl=en-GI&source=hp&biw=&bih=&q=Cheese%21&gbv=2&oq=&gs_l=:1)
+[INFO  - 2015-09-10T15:44:43.680Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-09-10T15:44:52.622Z] GhostDriver - Main - running on port 40983
+[INFO  - 2015-09-10T15:44:53.059Z] Session [e0c71400-57d2-11e5-b70f-05a49e778ae5] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; PPC Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2015-09-10T15:44:53.059Z] Session [e0c71400-57d2-11e5-b70f-05a49e778ae5] - page.customHeaders:  - {}
+[INFO  - 2015-09-10T15:44:53.059Z] Session [e0c71400-57d2-11e5-b70f-05a49e778ae5] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-09-10T15:44:53.060Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: e0c71400-57d2-11e5-b70f-05a49e778ae5
+[ERROR - 2015-09-10T15:44:54.057Z] Session [e0c71400-57d2-11e5-b70f-05a49e778ae5] - page.onError - msg: TypeError: 'undefined' is not a function (evaluating 'google.tick("load","dcl")')
+[ERROR - 2015-09-10T15:44:54.058Z] Session [e0c71400-57d2-11e5-b70f-05a49e778ae5] - page.onError - stack:
+  (anonymous function) (http://www.google.com.gi/search?hl=en-GI&source=hp&biw=&bih=&q=Cheese%21&gbv=2&oq=&gs_l=:1)
+  b (http://www.google.com.gi/search?hl=en-GI&source=hp&biw=&bih=&q=Cheese%21&gbv=2&oq=&gs_l=:1)
+[INFO  - 2015-09-10T15:44:54.227Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-09-10T15:45:24.679Z] GhostDriver - Main - running on port 48945
+[INFO  - 2015-09-10T15:45:25.161Z] Session [f3e94d50-57d2-11e5-895a-ab3adc9dd8eb] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; PPC Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2015-09-10T15:45:25.161Z] Session [f3e94d50-57d2-11e5-895a-ab3adc9dd8eb] - page.customHeaders:  - {}
+[INFO  - 2015-09-10T15:45:25.161Z] Session [f3e94d50-57d2-11e5-895a-ab3adc9dd8eb] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-09-10T15:45:25.161Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: f3e94d50-57d2-11e5-895a-ab3adc9dd8eb
+[ERROR - 2015-09-10T15:45:26.158Z] Session [f3e94d50-57d2-11e5-895a-ab3adc9dd8eb] - page.onError - msg: TypeError: 'undefined' is not a function (evaluating 'google.tick("load","dcl")')
+[ERROR - 2015-09-10T15:45:26.158Z] Session [f3e94d50-57d2-11e5-895a-ab3adc9dd8eb] - page.onError - stack:
+  (anonymous function) (http://www.google.com.gi/search?hl=en-GI&source=hp&biw=&bih=&q=Cheese%21&gbv=2&oq=&gs_l=:1)
+  b (http://www.google.com.gi/search?hl=en-GI&source=hp&biw=&bih=&q=Cheese%21&gbv=2&oq=&gs_l=:1)
+[INFO  - 2015-09-10T15:45:26.364Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-09-10T15:46:23.833Z] GhostDriver - Main - running on port 9889
+[INFO  - 2015-09-10T15:46:24.274Z] Session [17253ae0-57d3-11e5-a26a-8f7f66f456c3] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; PPC Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2015-09-10T15:46:24.274Z] Session [17253ae0-57d3-11e5-a26a-8f7f66f456c3] - page.customHeaders:  - {}
+[INFO  - 2015-09-10T15:46:24.274Z] Session [17253ae0-57d3-11e5-a26a-8f7f66f456c3] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-09-10T15:46:24.274Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 17253ae0-57d3-11e5-a26a-8f7f66f456c3
+[ERROR - 2015-09-10T15:46:25.686Z] Session [17253ae0-57d3-11e5-a26a-8f7f66f456c3] - page.onError - msg: TypeError: 'undefined' is not a function (evaluating 'google.tick("load","dcl")')
+[ERROR - 2015-09-10T15:46:25.686Z] Session [17253ae0-57d3-11e5-a26a-8f7f66f456c3] - page.onError - stack:
+  (anonymous function) (http://www.google.com.gi/search?hl=en-GI&source=hp&biw=&bih=&q=Cheese%21&gbv=2&oq=&gs_l=:1)
+  b (http://www.google.com.gi/search?hl=en-GI&source=hp&biw=&bih=&q=Cheese%21&gbv=2&oq=&gs_l=:1)
+[INFO  - 2015-09-10T15:46:25.877Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-09-10T15:46:33.846Z] GhostDriver - Main - running on port 18810
+[INFO  - 2015-09-10T15:46:34.287Z] Session [1d1d3ec0-57d3-11e5-a40e-c916d9f2a152] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; PPC Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2015-09-10T15:46:34.287Z] Session [1d1d3ec0-57d3-11e5-a40e-c916d9f2a152] - page.customHeaders:  - {}
+[INFO  - 2015-09-10T15:46:34.287Z] Session [1d1d3ec0-57d3-11e5-a40e-c916d9f2a152] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-09-10T15:46:34.287Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 1d1d3ec0-57d3-11e5-a40e-c916d9f2a152
+[ERROR - 2015-09-10T15:46:35.306Z] Session [1d1d3ec0-57d3-11e5-a40e-c916d9f2a152] - page.onError - msg: TypeError: 'undefined' is not a function (evaluating 'google.tick("load","dcl")')
+[ERROR - 2015-09-10T15:46:35.306Z] Session [1d1d3ec0-57d3-11e5-a40e-c916d9f2a152] - page.onError - stack:
+  (anonymous function) (http://www.google.com.gi/search?hl=en-GI&source=hp&biw=&bih=&q=Cheese%21&gbv=2&oq=&gs_l=:1)
+  b (http://www.google.com.gi/search?hl=en-GI&source=hp&biw=&bih=&q=Cheese%21&gbv=2&oq=&gs_l=:1)
+[INFO  - 2015-09-10T15:46:35.480Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-09-10T15:50:32.633Z] GhostDriver - Main - running on port 5122
+[INFO  - 2015-09-10T15:50:33.054Z] Session [ab6e32b0-57d3-11e5-9c38-4108b173292b] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; PPC Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2015-09-10T15:50:33.054Z] Session [ab6e32b0-57d3-11e5-9c38-4108b173292b] - page.customHeaders:  - {}
+[INFO  - 2015-09-10T15:50:33.054Z] Session [ab6e32b0-57d3-11e5-9c38-4108b173292b] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-09-10T15:50:33.054Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: ab6e32b0-57d3-11e5-9c38-4108b173292b
+[ERROR - 2015-09-10T15:50:35.800Z] Session [ab6e32b0-57d3-11e5-9c38-4108b173292b] - page.onError - msg: TypeError: 'undefined' is not a function (evaluating 'google.tick("load","dcl")')
+[ERROR - 2015-09-10T15:50:35.800Z] Session [ab6e32b0-57d3-11e5-9c38-4108b173292b] - page.onError - stack:
+  (anonymous function) (http://www.google.com.gi/search?hl=en-GI&source=hp&biw=&bih=&q=Cheese%21&gbv=2&oq=&gs_l=:1)
+  b (http://www.google.com.gi/search?hl=en-GI&source=hp&biw=&bih=&q=Cheese%21&gbv=2&oq=&gs_l=:1)
+[INFO  - 2015-09-10T15:50:37.504Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-09-10T15:51:47.739Z] GhostDriver - Main - running on port 32655
+[INFO  - 2015-09-10T15:51:48.179Z] Session [d83535f0-57d3-11e5-9ca9-9bcd01ba82b7] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; PPC Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2015-09-10T15:51:48.179Z] Session [d83535f0-57d3-11e5-9ca9-9bcd01ba82b7] - page.customHeaders:  - {}
+[INFO  - 2015-09-10T15:51:48.179Z] Session [d83535f0-57d3-11e5-9ca9-9bcd01ba82b7] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-09-10T15:51:48.179Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: d83535f0-57d3-11e5-9ca9-9bcd01ba82b7
+[ERROR - 2015-09-10T15:51:50.630Z] Session [d83535f0-57d3-11e5-9ca9-9bcd01ba82b7] - page.onError - msg: TypeError: 'undefined' is not a function (evaluating 'google.tick("load","dcl")')
+[ERROR - 2015-09-10T15:51:50.630Z] Session [d83535f0-57d3-11e5-9ca9-9bcd01ba82b7] - page.onError - stack:
+  (anonymous function) (http://www.google.com.gi/search?hl=en-GI&source=hp&biw=&bih=&q=Cheese%21&gbv=2&oq=&gs_l=:1)
+  b (http://www.google.com.gi/search?hl=en-GI&source=hp&biw=&bih=&q=Cheese%21&gbv=2&oq=&gs_l=:1)
+[INFO  - 2015-09-10T15:51:51.933Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2015-09-10T15:52:57.284Z] GhostDriver - Main - running on port 3725
+[INFO  - 2015-09-10T15:54:20.702Z] GhostDriver - Main - running on port 8946
+[INFO  - 2015-09-10T15:54:21.128Z] Session [335f6040-57d4-11e5-a8fa-ff3c01f40937] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; PPC Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2015-09-10T15:54:21.128Z] Session [335f6040-57d4-11e5-a8fa-ff3c01f40937] - page.customHeaders:  - {}
+[INFO  - 2015-09-10T15:54:21.128Z] Session [335f6040-57d4-11e5-a8fa-ff3c01f40937] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-09-10T15:54:21.128Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 335f6040-57d4-11e5-a8fa-ff3c01f40937
+[ERROR - 2015-09-10T15:54:27.180Z] Session [335f6040-57d4-11e5-a8fa-ff3c01f40937] - page.onError - msg: TypeError: 'undefined' is not a function (evaluating 'google.tick("load","dcl")')
+[ERROR - 2015-09-10T15:54:27.180Z] Session [335f6040-57d4-11e5-a8fa-ff3c01f40937] - page.onError - stack:
+  (anonymous function) (http://www.google.com.gi/search?hl=en-GI&source=hp&biw=&bih=&q=Cheese%21&gbv=2&oq=&gs_l=:1)
+  b (http://www.google.com.gi/search?hl=en-GI&source=hp&biw=&bih=&q=Cheese%21&gbv=2&oq=&gs_l=:1)
+[INFO  - 2015-09-10T15:54:28.014Z] ShutdownReqHand - _handle - About to shutdown
