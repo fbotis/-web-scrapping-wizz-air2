@@ -52,7 +52,7 @@ public class Main {
                 "/Users/florinbotis/Downloads/phantomjs-2.1.1-macosx/bin/phantomjs"
         );
 
-        ExecutorService pool = Executors.newFixedThreadPool(2);
+        ExecutorService pool = Executors.newFixedThreadPool(1);
         List<Future<Void>> results = new ArrayList<>();
         try {
             driver = new ChromeDriver(options);

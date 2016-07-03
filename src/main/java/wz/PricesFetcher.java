@@ -77,6 +77,8 @@ public class PricesFetcher implements Callable<Void> {
                 return null;
             }
 
+            log.info("cjcombinations.put({},{})", from, to);
+
 
             clickElement(By.id("ControlGroupRibbonAnonNewHomeView_AvailabilitySearchInputRibbonAnonNewHomeView_ButtonSubmit"));
 
