@@ -24,7 +24,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.djordje.tips.Main</mainClass>
+                            <mainClass>wz.Main</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
