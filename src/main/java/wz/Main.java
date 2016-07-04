@@ -31,8 +31,12 @@ public class Main {
     private static final Logger log = LoggerFactory.getLogger(Main.class);
 
     public static void main(String[] args) throws InterruptedException {
+        String chromedriverlocation=args[0];
+
+
+        //chromedriverlocation="/Users/florinbotis/Downloads/chromedriver";
         long start = System.currentTimeMillis();
-        System.setProperty("webdriver.chrome.driver", "/Users/florinbotis/Downloads/chromedriver");
+        System.setProperty("webdriver.chrome.driver", chromedriverlocation);
 
         ChromeOptions options = new ChromeOptions();
         JsonObject prefs = new JsonObject();
@@ -41,22 +45,12 @@ public class Main {
         WebDriver driver = null;
 
 
-        final DesiredCapabilities capabilities = new DesiredCapabilities();
-        final String port = System.getProperty("jetty.port");
-
         // Configure our WebDriver to support JavaScript and be able to find the PhantomJS binary
-        capabilities.setJavascriptEnabled(true);
-        capabilities.setCapability("takesScreenshot", false);
-        capabilities.setCapability(
-                PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,
-                "/Users/florinbotis/Downloads/phantomjs-2.1.1-macosx/bin/phantomjs"
-        );
 
         ExecutorService pool = Executors.newFixedThreadPool(1);
         List<Future<Void>> results = new ArrayList<>();
         try {
             driver = new ChromeDriver(options);
-//            driver = new PhantomJSDriver(capabilities);
 
             HashMap<Integer, Integer> combinations = null;
             if ((combinations = readFromFile()) == null) {
