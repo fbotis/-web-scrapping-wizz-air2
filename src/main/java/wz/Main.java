@@ -7,8 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.phantomjs.PhantomJSDriverService;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
@@ -22,6 +20,7 @@ import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by florinbotis on 01/07/2016.
@@ -31,8 +30,8 @@ public class Main {
     private static final Logger log = LoggerFactory.getLogger(Main.class);
 
     public static void main(String[] args) throws InterruptedException {
-        String chromedriverlocation=args[0];
-        String whereToSave=args[1];
+        String chromedriverlocation = args[0];
+        String whereToSave = args[1];
 
 
         //chromedriverlocation="/Users/florinbotis/Downloads/chromedriver";
@@ -50,34 +49,37 @@ public class Main {
 
         ExecutorService pool = Executors.newFixedThreadPool(1);
         List<Future<Void>> results = new ArrayList<>();
-        try {
-            driver = new ChromeDriver(options);
 
-            HashMap<Integer, Integer> combinations = null;
-            if ((combinations = readFromFile()) == null) {
-                combinations = getCOmbinations(driver);
-                writeCombinationsToFile(combinations);
-            }
+        while (true) {
+            try {
+                driver = new ChromeDriver(options);
 
-            driver.quit();
-            for (Map.Entry<Integer, Integer> entry : combinations.entrySet()) {
-                for (int to = 1; to <= entry.getValue(); to++) {
+                HashMap<Integer, Integer> combinations = null;
+                if ((combinations = readFromFile()) == null) {
+                    combinations = getCOmbinations(driver);
+                    writeCombinationsToFile(combinations);
+                }
 
-                    try {
-                        PricesFetcher fetcher = new PricesFetcher(null, entry.getKey(), to, whereToSave);
-                        results.add(pool.submit(fetcher));
-                    } catch (Exception ex) {
-                        log.error("Failed for from{} to{} doing it again...", entry.getValue(), to, ex);
-                        PricesFetcher fetcher = new PricesFetcher(null, entry.getKey(), to, whereToSave);
-                        results.add(pool.submit(fetcher));
+                driver.quit();
+                for (Map.Entry<Integer, Integer> entry : combinations.entrySet()) {
+                    for (int to = 1; to <= entry.getValue(); to++) {
+
+                        try {
+                            PricesFetcher fetcher = new PricesFetcher(null, entry.getKey(), to, whereToSave);
+                            results.add(pool.submit(fetcher));
+                        } catch (Exception ex) {
+                            log.error("Failed for from{} to{} doing it again...", entry.getValue(), to, ex);
+                            PricesFetcher fetcher = new PricesFetcher(null, entry.getKey(), to, whereToSave);
+                            results.add(pool.submit(fetcher));
+                        }
                     }
                 }
-            }
 
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        } finally {
-            log.info("END, total time: " + (System.currentTimeMillis() - start) / 1000 + " seconds");
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            } finally {
+                log.info("END, total time: " + (System.currentTimeMillis() - start) / 1000 + " seconds");
+            }
         }
 
 

@@ -24,6 +24,7 @@ public class PricesFetcher implements Callable<Void> {
     private final String today;
     private final String folderLocation;
     private SimpleDateFormat simpleDateFormat = new SimpleDateFormat("ddMMyyyy");
+    private SimpleDateFormat fileSimpleDateFormat = new SimpleDateFormat("ddMMyyyy-hh-mm");
     //how many times we press down arrow for From field
     private final int from;
     //how many times we press down arrow for To field
@@ -219,7 +220,7 @@ public class PricesFetcher implements Callable<Void> {
                             if (!Files.exists(folder)) {
                                 Files.createDirectory(folder);
                             }
-                            Files.write(Paths.get(folderLocation + "/" + today + "/" + today + "_" + fromDest.replaceAll("/", "-") + "_" + toDest.replaceAll("/", "-") + "_" + fileIndex + ".txt"), Lists.newArrayList(el.getText()));
+                            Files.write(Paths.get(folderLocation + "/" + today + "/" + fileSimpleDateFormat.format(new Date()) + "_" + fromDest.replaceAll("/", "-") + "_" + toDest.replaceAll("/", "-") + "_" + fileIndex + ".txt"), Lists.newArrayList(el.getText()));
                             fileIndex++;
                             return;
                         } catch (IOException e) {
