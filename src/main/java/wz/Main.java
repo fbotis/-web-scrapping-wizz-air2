@@ -53,8 +53,11 @@ public class Main {
 
         while (true) {
             if (LocalTime.now().getHour() != 8 || LocalTime.now().getHour() != 0) {
+                log.info("Crt hour={} waiting 1 hour...", LocalTime.now());
                 TimeUnit.HOURS.sleep(1);
             }
+
+            log.info("Hour is {}. Starting ... ", LocalTime.now());
 
 
             try {
