@@ -32,6 +32,7 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException {
         String chromedriverlocation=args[0];
+        String whereToSave=args[1];
 
 
         //chromedriverlocation="/Users/florinbotis/Downloads/chromedriver";
@@ -63,11 +64,11 @@ public class Main {
                 for (int to = 1; to <= entry.getValue(); to++) {
 
                     try {
-                        PricesFetcher fetcher = new PricesFetcher(null, entry.getKey(), to, "/Users/florinbotis/Downloads");
+                        PricesFetcher fetcher = new PricesFetcher(null, entry.getKey(), to, whereToSave);
                         results.add(pool.submit(fetcher));
                     } catch (Exception ex) {
                         log.error("Failed for from{} to{} doing it again...", entry.getValue(), to, ex);
-                        PricesFetcher fetcher = new PricesFetcher(null, entry.getKey(), to, "/Users/florinbotis/Downloads");
+                        PricesFetcher fetcher = new PricesFetcher(null, entry.getKey(), to, whereToSave);
                         results.add(pool.submit(fetcher));
                     }
                 }
