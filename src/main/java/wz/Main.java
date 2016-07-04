@@ -66,17 +66,19 @@ public class Main {
 
                         try {
                             PricesFetcher fetcher = new PricesFetcher(null, entry.getKey(), to, whereToSave);
-                            results.add(pool.submit(fetcher));
+                            Future<Void> future=pool.submit(fetcher);
+                            future.get();
                         } catch (Exception ex) {
                             log.error("Failed for from{} to{} doing it again...", entry.getValue(), to, ex);
                             PricesFetcher fetcher = new PricesFetcher(null, entry.getKey(), to, whereToSave);
-                            results.add(pool.submit(fetcher));
+                            Future<Void> future=pool.submit(fetcher);
+                            future.get();
                         }
                     }
                 }
 
             } catch (Exception ex) {
-                ex.printStackTrace();
+                log.error("Big error",ex);
             } finally {
                 log.info("END, total time: " + (System.currentTimeMillis() - start) / 1000 + " seconds");
             }
