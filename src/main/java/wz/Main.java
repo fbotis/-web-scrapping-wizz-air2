@@ -13,6 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.*;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -51,6 +52,11 @@ public class Main {
         List<Future<Void>> results = new ArrayList<>();
 
         while (true) {
+            if (LocalTime.now().getHour() != 8 || LocalTime.now().getHour() != 0) {
+                TimeUnit.HOURS.sleep(1);
+            }
+
+
             try {
                 driver = new ChromeDriver(options);
 
@@ -66,19 +72,19 @@ public class Main {
 
                         try {
                             PricesFetcher fetcher = new PricesFetcher(null, entry.getKey(), to, whereToSave);
-                            Future<Void> future=pool.submit(fetcher);
+                            Future<Void> future = pool.submit(fetcher);
                             future.get();
                         } catch (Exception ex) {
                             log.error("Failed for from{} to{} doing it again...", entry.getValue(), to, ex);
                             PricesFetcher fetcher = new PricesFetcher(null, entry.getKey(), to, whereToSave);
-                            Future<Void> future=pool.submit(fetcher);
+                            Future<Void> future = pool.submit(fetcher);
                             future.get();
                         }
                     }
                 }
 
             } catch (Exception ex) {
-                log.error("Big error",ex);
+                log.error("Big error", ex);
             } finally {
                 log.info("END, total time: " + (System.currentTimeMillis() - start) / 1000 + " seconds");
             }
