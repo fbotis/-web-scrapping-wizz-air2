@@ -52,13 +52,6 @@ public class Main {
         List<Future<Void>> results = new ArrayList<>();
 
         while (true) {
-            log.info("Crt time is {} waiting for hour 10 or 22 to start ", LocalTime.now());
-            if (LocalTime.now().getHour() != 10 && LocalTime.now().getHour() != 22) {
-                log.info("Crt hour={} waiting 1 hour...", LocalTime.now().getHour());
-                TimeUnit.HOURS.sleep(1);
-                continue;
-            }
-
             log.info("Hour is {}. Starting ... ", LocalTime.now());
 
 
@@ -93,6 +86,11 @@ public class Main {
             } finally {
                 log.info("END, total time: " + (System.currentTimeMillis() - start) / 1000 + " seconds");
             }
+
+            System.gc();
+            log.info("Crt hour={} waiting 12 hours...", LocalTime.now().getHour());
+            TimeUnit.HOURS.sleep(12);
+            continue;
         }
 
 
