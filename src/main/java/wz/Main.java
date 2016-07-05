@@ -52,7 +52,8 @@ public class Main {
         List<Future<Void>> results = new ArrayList<>();
 
         while (true) {
-            if (LocalTime.now().getHour() != 10 && LocalTime.now().getHour() != 23) {
+            log.info("Crt time is {} waiting for hour 10 or 22 to start ", LocalTime.now());
+            if (LocalTime.now().getHour() != 10 && LocalTime.now().getHour() != 22) {
                 log.info("Crt hour={} waiting 1 hour...", LocalTime.now().getHour());
                 TimeUnit.HOURS.sleep(1);
                 continue;
