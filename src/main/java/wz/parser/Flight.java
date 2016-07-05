@@ -1,5 +1,7 @@
 package wz.parser;
 
+import com.google.common.base.MoreObjects;
+
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -10,21 +12,12 @@ public class Flight {
 
     private Date fetchedDate;
     private Date flightDate;
-    private Date departure;
-    private Date arrival;
+    private String departure;
+    private String arrival;
     private String from;
     private String to;
     private BigDecimal price;
 
-    public Flight(Date fetchedDate, Date flightDate, Date departure, Date arrival, String from, String to, BigDecimal price) {
-        this.fetchedDate = fetchedDate;
-        this.flightDate = flightDate;
-        this.departure = departure;
-        this.arrival = arrival;
-        this.from = from;
-        this.to = to;
-        this.price = price;
-    }
 
     public Flight() {
 
@@ -46,19 +39,19 @@ public class Flight {
         this.flightDate = flightDate;
     }
 
-    public Date getDeparture() {
+    public String getDeparture() {
         return departure;
     }
 
-    public void setDeparture(Date departure) {
+    public void setDeparture(String departure) {
         this.departure = departure;
     }
 
-    public Date getArrival() {
+    public String getArrival() {
         return arrival;
     }
 
-    public void setArrival(Date arrival) {
+    public void setArrival(String arrival) {
         this.arrival = arrival;
     }
 
@@ -84,5 +77,18 @@ public class Flight {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return MoreObjects.toStringHelper(this)
+                .add("fetchedDate", fetchedDate)
+                .add("flightDate", flightDate)
+                .add("departure", departure)
+                .add("arrival", arrival)
+                .add("from", from)
+                .add("to", to)
+                .add("price", price)
+                .toString();
     }
 }

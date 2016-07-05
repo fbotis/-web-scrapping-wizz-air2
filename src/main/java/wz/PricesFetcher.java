@@ -53,7 +53,7 @@ public class PricesFetcher implements Callable<Void> {
             prefs.addProperty("profile.default_content_settings.geolocation", 2);
             options.setExperimentalOption("prefs", prefs);
             driver = new ChromeDriver(options);
-            waitdriver = new WebDriverWait(driver, 30);
+            waitdriver = new WebDriverWait(driver, 60);
 
             log.info("Start from={} to={} ", from, to);
             driver.get("https://wizzair.com//en-GB/FlightSearch");
