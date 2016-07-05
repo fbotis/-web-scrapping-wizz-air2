@@ -21,7 +21,6 @@ import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by florinbotis on 01/07/2016.
@@ -51,49 +50,40 @@ public class Main {
         ExecutorService pool = Executors.newFixedThreadPool(1);
         List<Future<Void>> results = new ArrayList<>();
 
-        while (true) {
-            log.info("Hour is {}. Starting ... ", LocalTime.now());
+        log.info("Hour is {}. Starting ... ", LocalTime.now());
 
 
-            try {
-                driver = new ChromeDriver(options);
+        try {
+            driver = new ChromeDriver(options);
 
-                HashMap<Integer, Integer> combinations = null;
-                if ((combinations = readFromFile()) == null) {
-                    combinations = getCOmbinations(driver);
-                    writeCombinationsToFile(combinations);
-                }
-
-                driver.quit();
-                for (Map.Entry<Integer, Integer> entry : combinations.entrySet()) {
-                    for (int to = 1; to <= entry.getValue(); to++) {
-
-                        try {
-                            PricesFetcher fetcher = new PricesFetcher(null, entry.getKey(), to, whereToSave);
-                            Future<Void> future = pool.submit(fetcher);
-                            future.get();
-                        } catch (Exception ex) {
-                            log.error("Failed for from{} to{} doing it again...", entry.getValue(), to, ex);
-                            PricesFetcher fetcher = new PricesFetcher(null, entry.getKey(), to, whereToSave);
-                            Future<Void> future = pool.submit(fetcher);
-                            future.get();
-                        }
-                    }
-                }
-
-            } catch (Exception ex) {
-                log.error("Big error", ex);
-            } finally {
-                log.info("END, total time: " + (System.currentTimeMillis() - start) / 1000 + " seconds");
+            HashMap<Integer, Integer> combinations = null;
+            if ((combinations = readFromFile()) == null) {
+                combinations = getCOmbinations(driver);
+                writeCombinationsToFile(combinations);
             }
 
-            System.gc();
-            log.info("Crt hour={} waiting 12 hours...", LocalTime.now().getHour());
-            TimeUnit.HOURS.sleep(12);
-            continue;
+            driver.quit();
+            for (Map.Entry<Integer, Integer> entry : combinations.entrySet()) {
+                for (int to = 1; to <= entry.getValue(); to++) {
+
+                    try {
+                        PricesFetcher fetcher = new PricesFetcher(null, entry.getKey(), to, whereToSave);
+                        Future<Void> future = pool.submit(fetcher);
+                        future.get();
+                    } catch (Exception ex) {
+                        log.error("Failed for from{} to{} doing it again...", entry.getValue(), to, ex);
+                        PricesFetcher fetcher = new PricesFetcher(null, entry.getKey(), to, whereToSave);
+                        Future<Void> future = pool.submit(fetcher);
+                        future.get();
+                    }
+                }
+            }
+
+        } catch (Exception ex) {
+            log.error("Big error", ex);
+        } finally {
+            log.info("END, total time: " + (System.currentTimeMillis() - start) / 1000 + " seconds");
         }
-
-
     }
 
     private static HashMap<Integer, Integer> readFromFile() {
