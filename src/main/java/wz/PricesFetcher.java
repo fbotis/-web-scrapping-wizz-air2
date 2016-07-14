@@ -186,8 +186,11 @@ public class PricesFetcher implements Callable<Void> {
         while (true) {
             boolean clicked = false;
             int iteration = 0;
-            for (WebElement el : driver.findElements(By.className("show-next"))) {
+            By by = By.className("show-next");
+            clickCloseModalIfAny(driver);
+            for (WebElement el : driver.findElements(by)) {
                 try {
+                    waitdriver.until(ExpectedConditions.elementToBeClickable(by));
                     el.click();
                     clicked = true;
                     return true;
@@ -205,6 +208,20 @@ public class PricesFetcher implements Callable<Void> {
             }
 
 
+        }
+    }
+
+    /**
+     * inchide dialogul cu promotiile
+     * @param driver
+     */
+    private void clickCloseModalIfAny(WebDriver driver) {
+        try {
+            for (WebElement el : driver.findElements(By.className("box-content"))) {
+                el.click();
+            }
+        } catch (Exception ex) {
+            //nothing
         }
     }
 
